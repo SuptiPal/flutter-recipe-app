@@ -51,7 +51,8 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
     final user = await AuthService().getCurrentUser();
     final displayName = user?.displayName ?? user?.email?.split('@').first ?? "User";
 
-    if (displayName.toLowerCase() == 'admin') {
+    // Prevent other users from using "Admin" as display name
+    if (displayName.toLowerCase() == 'admin' && user?.email != 'suptipal03@gmail.com') {
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text("Display name 'Admin' is reserved.")),
       );
