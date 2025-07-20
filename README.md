@@ -171,7 +171,7 @@ assets/images/recipe_app_logo.png
 ## 🧑‍💻 Developer
 
 **👤 Name:** Supti Pal  
-**📧 Email:** [suptipal03@gmail.com](mailto:suptipal03@gmail.com)  
+**📧 Email:** [suptipal291@gmail.com](mailto:suptipal291@gmail.com)  
 **🌐 GitHub:** [@SuptiPal](https://github.com/SuptiPal)
 
 ---
