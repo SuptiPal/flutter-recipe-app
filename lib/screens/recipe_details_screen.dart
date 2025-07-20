@@ -3,6 +3,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../models/recipe_model.dart';
 import '../services/auth_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class RecipeDetailScreen extends StatefulWidget {
   final Recipe recipe;
@@ -14,6 +15,7 @@ class RecipeDetailScreen extends StatefulWidget {
 }
 
 class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
+  User? _currentUser;
   final ScrollController _scrollController = ScrollController();
   final GlobalKey _commentsKey = GlobalKey();
   final TextEditingController _commentController = TextEditingController();
@@ -134,7 +136,13 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
   @override
   void initState() {
     super.initState();
+    _loadCurrentUser(); // <-- NEW
     _calculateTotalCommentsWithReplies();
+  }
+
+  Future<void> _loadCurrentUser() async {
+    _currentUser = await AuthService().getCurrentUser();
+    setState(() {}); // Refresh UI to enable delete buttons for admin
   }
 
   Future<void> _calculateTotalCommentsWithReplies() async {
@@ -266,7 +274,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                           },
                           child: const Text("Reply"),
                         ),
-                        if (isMyReply)
+                        if (isMyReply || _currentUser?.email == 'suptipal03@gmail.com')
                           IconButton(
                             icon: const Icon(Icons.delete, size: 18),
                             onPressed: () async {
@@ -412,7 +420,7 @@ class _RecipeDetailScreenState extends State<RecipeDetailScreen> {
                           },
                           child: const Text("Reply"),
                         ),
-                        if (isMyComment)
+                        if (isMyComment || _currentUser?.email == 'suptipal03@gmail.com')
                           IconButton(
                             icon: const Icon(Icons.delete, size: 18),
                             onPressed: () => _deleteComment(comment),
