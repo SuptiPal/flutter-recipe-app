@@ -29,7 +29,7 @@ The **Recipe App** is a Flutter-powered mobile application backed by Firebase. I
 - ✏️ Edit existing recipes
 - ❌ Delete recipes from dashboard
 - 💎 Admin badge visible next to display name
-
+- 🔎 **Search recipes by title or ingredients (comma-separated)**
 ---
 
 ## 🧑‍💻 Tech Stack
