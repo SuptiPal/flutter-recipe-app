@@ -17,6 +17,7 @@ The **Recipe App** is a Flutter-powered mobile application backed by Firebase. I
 - 📝 Edit display name (except reserved names)
 - 🗑️ Delete their own comments/replies
 - 👀 View recipe ingredients, instructions, ratings, and discussion
+- 🔎 **Search recipes by title or ingredients (comma-separated)**
 
 ### 👨‍💼 For Admin (Developer-Specified)
 
@@ -112,17 +113,18 @@ lib/
 
 ## 📱 Features Snapshot
 
-| Feature           | User | Admin |
-|------------------|------|-------|
-| Sign Up / Login  | ✅   | ✅    |
-| Rate Recipes     | ✅   | ✅    |
-| Comment & Reply  | ✅   | ✅    |
-| Like / Dislike   | ✅   | ✅    |
-| Delete own Cmnt  | ✅   | ✅    |
-| Delete others' Cmnt | ❌   | ✅    |
-| Upload / Edit / Delete Recipe | ❌ | ✅ |
-| Change Display Name | ✅ | ✅    |
-| See Admin Badge  | ❌   | ✅    |
+| Feature                        | User | Admin |
+|-------------------------------|------|-------|
+| Sign Up / Login               | ✅   | ✅    |
+| Rate Recipes                  | ✅   | ✅    |
+| Comment & Reply               | ✅   | ✅    |
+| Like / Dislike                | ✅   | ✅    |
+| Delete own Comment/Reply      | ✅   | ✅    |
+| Delete others' Comment/Reply  | ❌   | ✅    |
+| Upload / Edit / Delete Recipe | ❌   | ✅    |
+| Change Display Name           | ✅   | ✅    |
+| See Admin Badge               | ❌   | ✅    |
+| 🔎 Search by Title/Ingredient | ✅   | ✅    |
 
 ---
 
@@ -169,7 +171,7 @@ assets/images/recipe_app_logo.png
 ## 🧑‍💻 Developer
 
 **👤 Name:** Supti Pal  
-**📧 Email:** [suptipal291@gmail.com](mailto:suptipal291@gmail.com)  
+**📧 Email:** [suptipal03@gmail.com](mailto:suptipal03@gmail.com)  
 **🌐 GitHub:** [@SuptiPal](https://github.com/SuptiPal)
 
 ---
